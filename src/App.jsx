@@ -1,10 +1,11 @@
 
 import './App.css'
 import sun from './assets/icon-sun.svg'
-import moon from './assets/icon-moon.svg'
-import  dayPicture from './assets/bg-desktop-light.jpg'
-import  nightPicture from './assets/bg-desktop-dark.jpg'
-import { useState } from 'react';
+import moon from './assets/icon-moon.svg';
+import dayPicture from './assets/bg-desktop-light.jpg'
+import nightPicture from './assets/bg-desktop-dark.jpg'
+import { useState } from 'react'
+import TodoApp from './components/ListTodo'
 
 function App() {
   const [isDayMode, setIsDayMode] = useState(true);
@@ -13,11 +14,9 @@ function App() {
     setIsDayMode(!isDayMode);
   };
 
-
   return (
-    
-      <div>
-   <header
+    <div>
+      <header
         className="pictureheader"
         style={{ backgroundImage: `url(${isDayMode ? dayPicture : nightPicture})` }}
       >
@@ -28,41 +27,19 @@ function App() {
         {!isDayMode && (
           <img src={moon} alt="" onClick={changeHandler} />
         )}
-        <div
-          className="whattodo"
-          style={{ backgroundColor: isDayMode ? 'white' : '#25273d' }}
-        >
-          <div
-            className="smalltick"
-            style={{ backgroundColor: isDayMode ? 'white' : '#25273d' }}
-          >
-            <input type="checkbox" className="tick-button" />
-            <input
-              type="text"
-              className="whattodotext"
-              placeholder="Create TODO list"
-              style={{ backgroundColor: isDayMode ? 'white' : '#25273d', color: isDayMode ? '#25273d' : 'white' }}
-            />
-          </div>
-        </div>
+                
+        
       </header>
-        <main>
-    
-      <div className='cardfilters' >
-        <div className='choicefilterbox'> 
-        <button className='howmanyitemsleft'> </button>
-        </div>
-        
+      <main>
+      <div className='card'>
+      <TodoApp isDayMode={isDayMode}/>
+         </div>
+           </main>
+      <div className='footerbox'>
+        <p className='Draganddroptext'>Drag and drop to reorder list</p>
       </div>
-               </main>
-               <div className='footerbox'>
-               <p className='Draganddroptext'> Drag and drop to reorder list </p>
-               </div>
-        
-      </div>
-   
-    
-  )
+    </div>
+  );
 }
 
 export default App;

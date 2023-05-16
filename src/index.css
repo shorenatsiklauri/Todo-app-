@@ -11,5 +11,36 @@ body {
   min-height: 100vh;
   font-family: "Josefin Sans", sans-serif;
   background-color: #ecf2f8;
-  padding-bottom: 120px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+
+.card {
+  margin-top: 200px;
+  position: absolute;
+  margin-top: -45px;
+}
+
+.Draganddroptext {
+  color: #c8cbe7;
+}
+
+.footerbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dayMode {
+  background-color: white;
+}
+.nightMode {
+  background: #25273d;
+}
+@media (max-width: 640px) {
 }
