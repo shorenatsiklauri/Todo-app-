@@ -1,4 +1,3 @@
-
 import './App.css'
 import sun from './assets/icon-sun.svg'
 import moon from './assets/icon-moon.svg';
@@ -7,37 +6,34 @@ import nightPicture from './assets/bg-desktop-dark.jpg'
 import { useState } from 'react'
 import TodoApp from './components/ListTodo'
 
+
 function App() {
   const [isDayMode, setIsDayMode] = useState(true);
 
-  const changeHandler = () => {
+  const toggleDayMode = () => {
     setIsDayMode(!isDayMode);
   };
 
+  const bgColor = isDayMode ? '#ffffff' : '#25273d';
+  const backgroundImage = isDayMode ? dayPicture : nightPicture;
+
   return (
     <div>
-      <header
-        className="pictureheader"
-        style={{ backgroundImage: `url(${isDayMode ? dayPicture : nightPicture})` }}
+      <header className="pictureheader"  style={{ backgroundImage: `url(${isDayMode ? dayPicture : nightPicture})` }}
       >
         <h1 className="Todo">T O D O</h1>
-        {isDayMode && (
-          <img src={sun} alt="" onClick={changeHandler} />
-        )}
-        {!isDayMode && (
-          <img src={moon} alt="" onClick={changeHandler} />
-        )}
-                
-        
+        <img src={isDayMode ? sun : moon} alt="" onClick={toggleDayMode} />
       </header>
-      <main>
-      <div className='card'>
-      <TodoApp isDayMode={isDayMode}/>
-         </div>
-           </main>
-      <div className='footerbox'>
-        <p className='Draganddroptext'>Drag and drop to reorder list</p>
+      <main style={{ background: bgColor }}>
+        <div className="card">
+          <TodoApp isDayMode={isDayMode} />
+        </div>
+
+        <div className="footerbox" style={{ background: bgColor }}>
+        <p className="Draganddroptext">Drag and drop to reorder list</p>
       </div>
+      </main>
+    
     </div>
   );
 }

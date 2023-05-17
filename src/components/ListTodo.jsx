@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './ListTodo.css';
 
-function ListTodo({isDayMode}) {
-   const white = '#ffffff'; // color for day mode
-  const black = '#25273d';; // color for night mode
+function ListTodo({ isDayMode }) {
+  const white = '#ffffff'; // color for day mode
+  const black = '#25273d'; // color for night mode
   console.log(isDayMode);
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState('');
@@ -49,48 +49,72 @@ function ListTodo({isDayMode}) {
   const handleFilterChange = (filterType) => {
     setFilter(filterType);
   };
+  
   const handleClearList = () => {
     setTodos([]);
   };
-  
-
 
   return (
-    <div>
+    <div className='mainbox' style={{ backgroundColor: isDayMode ? white : black, color: isDayMode ? black : white }}>
+      <div className="boxforinputelement" style={{ backgroundColor: isDayMode ? white : black, color: isDayMode ? black : white }}>
       <input
         type="text"
         value={inputValue}
         onChange={handleInputChange}
         placeholder="Enter a new todo"
-        className="inputwhattodo"  style={{ backgroundColor: isDayMode ? white : black }}
-      />
-      <button className='allbuttons'style={{ backgroundColor: isDayMode ? white : black }}onClick={handleAddTodo}>Add Todo</button>
+        className="inputwhattodo"
+        style={{ backgroundColor: isDayMode ? white : black, color: isDayMode ? black : white }}
 
-      <ul className="whattodolist"  style={{ background: `url(${isDayMode ? white : black})` }}>
+        onKeyDown={(e) => {
+          if(e.key==='Enter') {
+            handleAddTodo()
+
+          }
+        }
+        
+        }
+
+      />
+      </div>
+
+      <ul className="whattodolist" style={{ backgroundColor: isDayMode ? white : black }}>
+        
         {filteredTodos.map((todo) => (
           <li
             key={todo.id}
             style={{
               textDecoration: todo.completed ? 'line-through' : 'none',
+              backgroundColor: isDayMode ? white : black,
+              color: isDayMode ? black : white,
             }}
             className="whattodotext"
           >
-            <span>{todo.text}</span>
+           
+            
             <input
-              type="checkbox"
+              type="checkbox" style={{ backgroundColor: isDayMode ? white : black }}
               checked={todo.completed}
               onChange={() => handleToggleComplete(todo.id)}
             />
-            <button className='allbuttons' onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+             <span>{todo.text}</span>
+            <button className="allbuttons"style={{ backgroundColor: isDayMode ? white : black }} onClick={() => handleDeleteTodo(todo.id)}>
+              Delete
+            </button>
           </li>
         ))}
       </ul>
 
-      <div className="filter-buttons">
-        <button className='allbuttons' onClick={() => handleFilterChange('All')}>All</button>
-        <button className='allbuttons' onClick={() => handleFilterChange('Active')}>Active</button>
-        <button className='allbuttons'onClick={() => handleFilterChange('Completed')}>Completed</button>
-         <button className='allbuttons' onClick={handleClearList}>Clear</button>
+      <div className="filter-buttons" style={{ backgroundColor: isDayMode ? white : black }}>
+        <button className="allbuttons" style={{ backgroundColor: isDayMode ? white : black }} onClick={() => handleFilterChange('All')}>
+          All
+        </button>
+        <button className="allbuttons" style={{ backgroundColor: isDayMode ? white : black }}onClick={() => handleFilterChange('Active')}>
+          Active
+        </button>
+        <button className="allbuttons" style={{ backgroundColor: isDayMode ? white : black }}onClick={() => handleFilterChange('Completed')}>
+          Completed
+        </button>
+         <button className='allbuttons' style={{ backgroundColor: isDayMode ? white : black }}onClick={handleClearList}>Clear</button>
       </div>
     </div>
   );
