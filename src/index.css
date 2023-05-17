@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  color: #494c6b;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: -40px;
+  color: #494c6b;
+  padding: 20px;
+}
+
+.Draganddroptext {
+  color: black;
+}
+.pictureheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 200px;
+}
+
+.Todo {
+  margin-top: -5px;
+}
+.footerbox {
+  margin-top: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: #25273d;
+}
+
+@media (max-width: 640px) {
+}

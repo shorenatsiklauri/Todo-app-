@@ -1,0 +1,116 @@
+.pictureheader {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+.isDayMode {
+  width: 5px;
+}
+h1 {
+  margin-top: 70px;
+}
+.whattodo {
+  height: 64px;
+  width: 540px;
+  background: #25273d;
+  border-radius: 8px;
+  font-family: "Josefin Sans", sans-serif;
+  border: none;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  color: #c8cbe7;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin: auto;
+  border: none;
+}
+
+.whattodotext {
+  height: 50px;
+  width: 500px;
+  background: #25273d;
+  border-radius: 8px;
+  font-family: "Josefin Sans", sans-serif;
+  border: none;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  color: #c8cbe7;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  background-color: #171823;
+  min-height: 500px;
+  position: relative;
+  font-family: "Josefin Sans", sans-serif;
+}
+.cardfilters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 540px;
+  left: 450px;
+  border-radius: 0px;
+  background-color: white;
+  position: absolute;
+  margin-top: -40px;
+  margin-left: -90px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.footerbox {
+  width: 100%;
+  background-color: #171823;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: -0.194444px;
+
+  color: #5b5e7e;
+}
+.choicefilterbox {
+  height: 64px;
+  width: 540px;
+  background: #25273d;
+  border-radius: 8px;
+  font-family: "Josefin Sans", sans-serif;
+  border: none;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  color: #c8cbe7;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin: auto;
+  border: none;
+}
