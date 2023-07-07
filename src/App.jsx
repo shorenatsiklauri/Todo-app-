@@ -8,7 +8,7 @@ import TodoApp from './components/ListTodo'
 
 
 function App() {
-  const [isDayMode, setIsDayMode] = useState(true);
+  const [isDayMode, setIsDayMode] = useState(false);
 
   const toggleDayMode = () => {
     setIsDayMode(!isDayMode);

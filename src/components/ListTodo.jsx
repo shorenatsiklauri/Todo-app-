@@ -8,6 +8,7 @@ function ListTodo({ isDayMode }) {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [filter, setFilter] = useState('All');
+  
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
