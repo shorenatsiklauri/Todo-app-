@@ -6,6 +6,13 @@
   box-sizing: border-box;
 }
 
+Body {
+  height: 100%;
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -14,6 +21,7 @@ main {
   flex-direction: column;
   color: #494c6b;
   font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
 }
 
 .card {
@@ -23,7 +31,9 @@ main {
   margin: auto;
   margin-top: -40px;
   color: #494c6b;
-  padding: 20px;
+  /* padding: 20px; */
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
 }
 
 .Draganddroptext {
@@ -45,7 +55,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
+
   background: #25273d;
 }
 

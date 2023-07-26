@@ -79,6 +79,7 @@ main {
 .footerbox {
   width: 100%;
   background-color: #171823;
+
   display: flex;
   justify-content: center;
   align-items: center;

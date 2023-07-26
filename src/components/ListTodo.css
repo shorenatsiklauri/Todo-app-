@@ -17,7 +17,7 @@
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 18px;
   letter-spacing: -0.25px;
   color: #494c6b;
@@ -51,13 +51,14 @@
   padding: 10px;
 }
 
-main {
+/* main {
   width: 100%;
+  height: 100%;
   background-color: #171823;
 
   position: relative;
-  font-family: "Josefin Sans", sans-serif;
-}
+  font-family: "Josefin Sans", sans-serif; */
+/* } */
 
 .footerbox {
   width: 100%;
@@ -69,7 +70,7 @@ main {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 14px;
   text-align: center;
   letter-spacing: -0.194444px;
@@ -87,7 +88,7 @@ main {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 18px;
   letter-spacing: -0.25px;
   color: #c8cbe7;

@@ -19,17 +19,27 @@ function App() {
 
   return (
     <div>
-      <header className="pictureheader"  style={{ backgroundImage: `url(${isDayMode ? dayPicture : nightPicture})` }}
+      <header className="pictureheader"  style={{
+  backgroundImage: `url(${isDayMode ? dayPicture : nightPicture})`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+}}
       >
         <h1 className="Todo">T O D O</h1>
         <img src={isDayMode ? sun : moon} alt="" onClick={toggleDayMode} />
       </header>
-      <main style={{ background: bgColor }}>
+      <main style={{ background: bgColor ,  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',}}>
         <div className="card">
-          <TodoApp isDayMode={isDayMode} />
+          <TodoApp isDayMode={isDayMode } />
         </div>
 
-        <div className="footerbox" style={{ background: bgColor }}>
+        <div className="footerbox" style={{
+  background: bgColor,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+ 
+}}>
         <p className="Draganddroptext">Drag and drop to reorder list</p>
       </div>
       </main>
